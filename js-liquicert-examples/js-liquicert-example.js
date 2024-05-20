@@ -1,3 +1,4 @@
+// Start by npm installing dotenv, ethers, js-liquicert
 require('dotenv').config();
 const { ethers } = require('ethers');
 const { Liquicert } = require('js-liquicert');
@@ -22,6 +23,7 @@ const lc = new Liquicert(infuraProvider, wallet);
 async function example(src, target) {
 
     // We will pin some data to IPFS, create an attestation, and save a path to that attestation.
+    // If you already have your own data on IPFS, use that CID instead of this upload utility
     // Because this interacts with the public version of liquicert, add your own data here. It will be permanently made public.
     const dataToSave = {treeSpecies: "Arbutus Menziesii", diameter_cm: 23}
 
